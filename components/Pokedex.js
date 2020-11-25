@@ -5,10 +5,15 @@ import styles from '../styles/Pokedex.module.scss'
 const Pokedex = ({ pokemon, exp, isWinner }) => {
   let title
   if (isWinner) {
-    title = <h1 className={styles.Pokedex_Winner}>Winning Hand</h1>
+    title = <h1>Winning Hand</h1>
   } else {
-    title = <h1 className={styles.Pokedex_Loser}>Losing Hand</h1>
+    title = <h1>Losing Hand</h1>
   }
+  // if (isWinner) {
+  //   title = <h1 className={styles.Pokedex_Winner}>Winning Hand</h1>
+  // } else {
+  //   title = <h1 className={styles.Pokedex_Loser}>Losing Hand</h1>
+  // }
   const POKE_API = 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/'
   const convertId = (id) => {
     return id.toString().padStart(3, '0')
